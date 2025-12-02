@@ -1,0 +1,131 @@
+/* =============== HERO WRAPPER =============== */
+.main__hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4rem 6rem;
+    gap: 2rem;
+    height: 100vh;        
+    box-sizing: border-box;
+}
+
+/* =============== TEKS SECTION =============== */
+.main__teks {
+    max-width: 50%;
+}
+
+.main__teks h1 {
+    font-size: 3.5rem;
+    line-height: 1.1;
+    margin: 0;
+    font-weight:bolder;
+}
+
+.main__teks h2 {
+    font-size: 1rem;
+    line-height: 1.1;
+    margin: 0;
+    font-weight: 600;
+    color: #0d99ff;
+}
+
+.main__teks p {
+    margin-top: 1rem;
+    font-size: .9rem;
+    color: #444;
+    max-width: 80%;
+}
+
+.header__1 {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.header__1 img {
+    width: 28px;
+}
+
+/* Tombol */
+.main__teks a {
+    display: inline-block;
+    background-color: #0d99ff;
+    color: white;
+    padding: 0.8rem 1.7rem;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-top: 1.5rem;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.main__teks a:hover {
+    background-color: #0979c7;
+}
+
+/* =============== HERO IMAGE =============== */
+.hero img {
+    width: 470px;
+    max-width: 100%;
+    object-fit: contain;
+    margin-top: -50px;
+}
+
+/* =============== ROTATING TEXT (UL LIST) =============== */
+
+.main__teks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.8rem 0 0 0;
+    height: 3.2rem; /* tinggi area teks */
+    position: relative;
+    overflow: hidden;
+}
+
+.main__teks ul li {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: #0d99ff;
+
+    opacity: 0;
+    transform: translateY(20px);
+    animation: rotateWord 9s linear infinite;
+}
+
+/* Urutan muncul per 3 detik */
+.main__teks ul li:nth-child(1) { animation-delay: 0s; }
+.main__teks ul li:nth-child(2) { animation-delay: 3s; }
+.main__teks ul li:nth-child(3) { animation-delay: 6s; }
+
+/* ANIMASI: muncul → diam → hilang */
+@keyframes rotateWord {
+    0%   { opacity: 0; transform: translateY(20px); }
+    10%  { opacity: 1; transform: translateY(0); }
+    30%  { opacity: 1; transform: translateY(0); }
+    40%  { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 0; }
+}
+
+/* =============== RESPONSIVE =============== */
+@media(max-width: 900px) {
+    .main__hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main__teks {
+        max-width: 100%;
+    }
+
+    .main__teks p {
+        max-width: 100%;
+    }
+
+    .hero img {
+        width: 300px;
+    }
+}
