@@ -1,0 +1,71 @@
+/* WRAPPER */
+.visi_misi {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 9rem;
+    padding: 3rem 2rem;
+}
+
+/* CARD */
+.kartu {
+    background: #0b4f80;
+    border-radius: 15px;
+    width: 350px;
+    padding: 2rem;
+    border: 1.5px solid #555;
+    transition: 0.3s ease;
+}
+
+/* EFFECT HOVER */
+.kartu:hover {
+    transform: translateY(-8px);
+    background: #2D8BBA;
+}
+
+/* HEADER DALAM CARD */
+.head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.head h2 {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* ICON */
+.material-symbols-outlined {
+    font-size: 2.5rem;
+    color: white;
+    font-variation-settings:
+        "FILL" 0,
+        "wght" 400,
+        "GRAD" 0,
+        "opsz" 48;
+}
+
+/* PARAGRAF */
+.kartu p {
+    color: #ccc;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .visi_misi {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kartu {
+        width: 100%;
+        max-width: 420px;
+    }
+}
