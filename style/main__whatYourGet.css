@@ -2,9 +2,10 @@
 .what_your_get {
   display: flex;
   gap: 40px;
-  align-items: flex-start;
-  padding: 40px;
-  border-radius: 12px;
+  align-items: center;
+  padding: 60px 6rem;
+  border-radius: 0;
+  background-color: white;
 }
 
 /* Left Image */
@@ -12,7 +13,8 @@
   width: 600px;
   height: 400px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Right Content */
@@ -23,29 +25,63 @@
 }
 
 .card__left h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: left;
+  color: #2F5F98;
+  font-weight: 700;
 }
 
 /* Paragraph styles seperti sketsa (kotak memanjang) */
 .card__left p {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0px 18px 0px 32px; 
-  border-radius: 8px;
-  line-height: 1.5;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: #f0f8ff;
+  padding: 15px 18px 15px 40px;
+  border-radius: 10px;
+  line-height: 1.6;
+  border: 1px solid #d1e9ff;
   position: relative;
+  color: #555;
+  margin-bottom: 15px;
+  transition: 0.3s ease;
+}
+
+.card__left p:hover {
+  background: #e6f2ff;
+  transform: translateX(5px);
+  border-color: #2D8BBA;
 }
 
 /* BULLET */
 .card__left p::before {
   content: "•";
   position: absolute;
-  left: 12px;
+  left: 15px;
   top: 50%;
   transform: translateY(-50%);
-  font-size: 20px;
+  font-size: 24px;
+  color: #2D8BBA;
 }
 
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .what_your_get {
+    flex-direction: column-reverse;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
 
+  .card__right img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+  }
+
+  .card__left h2 {
+    text-align: center;
+    font-size: 2rem;
+  }
+
+  .card__left p {
+    text-align: left;
+  }
+}

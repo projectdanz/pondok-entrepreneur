@@ -1,153 +1,427 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pondok-PE</title>
-    <link rel="stylesheet" href="style/header.css" />
-    <link rel="stylesheet" href="/style/main__hero.css" />
-    <link rel="stylesheet" href="/style/main__about.css" />
-    <link rel="stylesheet" href="/style/main__visiMisi.css" />
-    <link rel="stylesheet" href="/style/main__whatYourGet.css">
-    <style>
-      body {
-        margin: 0;
-        padding: 0;
-        padding-top: 2rem;
-        box-sizing: border-box;
-        font-family: Arial, Helvetica, sans-serif;
-      }
-    </style>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500"
-    />
-  </head>
-  <body>
-    <header class="header">
-      <div class="header__logo">
-        <img src="assets/image/icon-pondok-pe-1.png" alt="icon-pondok-pe" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pondok-PE</title>
+  <link rel="stylesheet" href="style/header.css" />
+  <link rel="stylesheet" href="/style/main__hero.css" />
+  <link rel="stylesheet" href="/style/main__about.css" />
+  <link rel="stylesheet" href="/style/main__visiMisi.css" />
+  <link rel="stylesheet" href="/style/main__whatYourGet.css" />
+  <link rel="stylesheet" href="/style/main__kurikulum.css" />
+  <link rel="stylesheet" href="/style/main__ask.css" />
+  <link rel="stylesheet" href="/style/footer.css" />
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      padding-top: 2rem;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@300;400;500" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__logo">
+      <img src="assets/image/icon-pondok-pe-1.png" alt="icon-pondok-pe" />
+    </div>
+
+    <button class="hamburger" aria-label="Toggle navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="header__nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact Us</a></li>
+        <!-- Mobile Only CTA -->
+        <li class="mobile-cta" style="display: none;"><a href="#" class="btn-cta">Daftar Sekarang</a></li>
+      </ul>
+    </nav>
+
+    <div class="header__cta">
+      <a href="#" class="btn-cta">Daftar Sekarang</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="main__hero">
+      <div class="main__teks">
+        <div class="header__1">
+          <img src="./assets/image/badge.svg" alt="" />
+          <h2>Best Pondok Entrepreneur</h2>
+        </div>
+
+        <div>
+          <h1>Membangun</h1>
+          <h1>Entrepreneur yang</h1>
+          <ul class="rotate-text">
+            <li>Muda</li>
+            <li>Mandiri</li>
+            <li>Kreatif</li>
+          </ul>
+        </div>
+
+        <div>
+          <p>
+            Selamat datang di Pondok Entrepreneur, tempat di mana ide-ide
+            kreatif menjadi aksi nyata. Kami mendampingi Anda dalam perjalanan
+            meraih sukses di dunia bisnis
+          </p>
+        </div>
+
+        <div>
+          <a href="#">About us</a>
+        </div>
+      </div>
+      <div class="hero">
+        <img src="/assets/image/foto_abi_right.svg" alt="" />
+      </div>
+    </section>
+
+    <section class="about_us">
+      <div class="about_left">
+        <img src="./assets/image/hero_seaction_about.jpeg" alt="" />
       </div>
 
-      <nav class="header__nav">
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact Us</a></li>
-        </ul>
-      </nav>
+      <div class="about_right">
+        <h1>Pondok Entrepreneur</h1>
+        <h4>
+          Pondok Asrama Non Formal untuk Menjadi Santri yang Siap Mengaji dan
+          Menggaji
+        </h4>
+        <p>
+          Selama 2 tahun, para lulusan SMA/SMK atau santri pondok pesantren
+          akan dibimbing bukan hanya dengan ilmu agama, tapi juga dibekali
+          skill bisnis dan teknologi digital mulai dari digital marketing,
+          desain, hingga kewirausahaan berbasis syariah.
+        </p>
+        <h4>
+          Bukan sekadar belajar, tapi juga disiapkan untuk berkarya dan
+          mandiri.
+        </h4>
 
-      <div class="header__cta">
-        <a href="#" class="btn-cta">Daftar Sekarang</a>
+        <a href="#">Contact Us</a>
       </div>
-    </header>
+    </section>
 
-    <main>
-      <section class="main__hero">
-        <div class="main__teks">
-          <div class="header__1">
-            <img src="./assets/image/badge.svg" alt="" />
-            <h2>Best Pondok Entrepreneur</h2>
+    <section class="visi_misi">
+      <div class="blok kartu">
+        <div class="head">
+          <span class="material-symbols-outlined">visibility</span>
+          <h2>Visi</h2>
+        </div>
+        <p>
+          Membentuk generasi entrepreneur muda yang kreatif, mandiri, dan
+          berdaya saing tinggi di tingkat global.
+        </p>
+      </div>
+
+      <div class="blok kartu">
+        <div class="head">
+          <span class="material-symbols-outlined">finance_mode</span>
+          <h2>Misi</h2>
+        </div>
+        <p>
+          Menyediakan pelatihan praktis, komunikasi dan mentoring yang
+          berfokus pada pengembangan keterampilan kewirausahaan.
+        </p>
+      </div>
+    </section>
+
+    <section class="what_your_get">
+      <div class="card__left">
+        <h2>Apa Yang Akan Kamu Dapatkan ?</h2>
+        <p>Belajar Agama, Bisnis, dan Teknologi dalam Satu Atap</p>
+        <p>
+          Selama 2 tahun, para santri akan dibekali ilmu agama sekaligus skill
+          praktis masa kini: mulai dari fundamental bisnis syariah, dasar IT,
+          pembuatan konten, strategi pemasaran digital, hingga latihan
+          langsung sebagai customer service (offline & online).
+        </p>
+        <p>
+          Bukan sekadar menjadi santri yang mengaji, tapi juga siap menghadapi
+          dunia kerja & wirausaha.
+        </p>
+      </div>
+      <div class="card__right">
+        <img src="/assets/image/seaction_your_get.jpg" alt="Apa yang kamu dapat" />
+      </div>
+    </section>
+
+    <section class="carousel-container">
+      <button class="nav prev">‹</button>
+
+      <div class="carousel" id="carousel">
+        <div class="card">
+          <div class="card_head">
+            <h2>Ilmu Kepemimpinan</h2>
+          </div>
+          <ul>
+            <li>
+              <p>
+                Jadi pemimpin yang siap dipimpin, siap memimpin, dan
+                berpengaruh ke segala arah.
+              </p>
+            </li>
+            <li>
+              <p>
+                Kuasi gaya kepemimpinan, problem solving, dan keputusan
+                efektif dalam satu program.
+              </p>
+            </li>
+            <li>
+              <p>
+                Tingkatkan self-leadership, komunikasi, produktivitas, dan
+                mental tangguh dengan teknik alter ego.
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card_head">
+            <h2>Ilmu Jualan</h2>
+          </div>
+          <ul>
+            <li>
+              <p>
+                Kuasi ilmu jualan modern: riset market praktis, BMC, dan
+                strategi penjualan yang langsung bisa diterapkan.
+              </p>
+            </li>
+            <li>
+              <p>Tingkatkan omzet dengan teknik selling & persuasi.</p>
+            </li>
+            <li>
+              <p>Susun strategi jualan dari riset hingga eksekusi.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card_head">
+            <h2>Ilmu Konten</h2>
+          </div>
+          <ul>
+            <li>
+              <p>
+                Asah creative thinking, videography, photography, dan design.
+              </p>
+            </li>
+            <li>
+              <p>Pahami algoritma terbaru & kerja cepat sesuai brief.</p>
+            </li>
+            <li>
+              <p>Kuasai copywriting & produksi konten.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card_head">
+            <h2>Ilmu IT</h2>
+          </div>
+          <ul>
+            <li>
+              <p>Kuasi logika pemrograman & teknologi pendukung bisnis.</p>
+            </li>
+            <li>
+              <p>Selalu update teknologi terbaru untuk marketing.</p>
+            </li>
+            <li>
+              <p>Bangun pondasi digital yang kuat.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card_head">
+            <h2>Ilmu Bicara</h2>
+          </div>
+          <ul>
+            <li>
+              <p>Tingkatkan percaya diri berbicara di depan massa.</p>
+            </li>
+            <li>
+              <p>Pelajari cara menyusun skrip yang menarik.</p>
+            </li>
+            <li>
+              <p>Latih olah vokal untuk komunikasi efektif.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="card_head">
+            <h2>Ilmu Layanan & Kedisiplinan</h2>
+          </div>
+          <ul>
+            <li>
+              <p>Kuasi layanan pelanggan profesional.</p>
+            </li>
+            <li>
+              <p>Tangani komplain dengan efektif & tenang.</p>
+            </li>
+            <li>
+              <p>Latihan simulasi pelayanan & kedisiplinan.</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="nav next">›</button>
+    </section>
+
+    <section class="ask_for_me">
+      <h1>Pertanyaan yang Sering Diajukan</h1>
+      <div class="wrap__card">
+        <div class="ask_left">
+          <img src="your-image.jpg" alt="illustration" />
+        </div>
+
+        <div class="ask_right">
+          <div class="faq_item">
+            <button class="faq_header">
+              <h3>Apa itu Pondok Entrepreneur?</h3>
+              <span class="icon">+</span>
+            </button>
+            <div class="faq_content">
+              <p>
+                Pondok Entrepreneur adalah program pembinaan berbasis
+                pesantren yang mengajarkan santri tentang fundamental bisnis,
+                digital marketing, IT dasar, dan pelayanan pelanggan.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <h1>Membangun</h1>
-            <h1>Entrepreneur yang</h1>
-            <ul class="rotate-text">
-              <li>Muda</li>
-              <li>Mandiri</li>
-              <li>Kreatif</li>
-            </ul>
+          <div class="faq_item">
+            <button class="faq_header">
+              <h3>Siapa yang bisa mengikuti program Pondok Entrepreneur?</h3>
+              <span class="icon">+</span>
+            </button>
+            <div class="faq_content">
+              <p>
+                Terbuka untuk santri, alumni, dan siapa saja yang ingin
+                belajar bisnis dari dasar secara islami dan terarah.
+              </p>
+            </div>
           </div>
 
-          <div>
-            <p>
-              Selamat datang di Pondok Entrepreneur, tempat di mana ide-ide
-              kreatif menjadi aksi nyata. Kami mendampingi Anda dalam perjalanan
-              meraih sukses di dunia bisnis
-            </p>
+          <div class="faq_item">
+            <button class="faq_header">
+              <h3>Apa saja yang akan dipelajari?</h3>
+              <span class="icon">+</span>
+            </button>
+            <div class="faq_content">
+              <ul>
+                <li>Rencana bisnis</li>
+                <li>Manajemen keuangan</li>
+                <li>Digital marketing</li>
+                <li>Growth hacking</li>
+                <li>Kepemimpinan & manajemen tim</li>
+              </ul>
+            </div>
           </div>
 
-          <div>
-            <a href="#">About us</a>
+          <div class="faq_item">
+            <button class="faq_header">
+              <h3>Berapa lama durasi program?</h3>
+              <span class="icon">+</span>
+            </button>
+            <div class="faq_content">
+              <p>
+                Program ini berdurasi 2 tahun, termasuk masa belajar dasar dan
+                proyek nyata.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq_item">
+            <button class="faq_header">
+              <h3>Apakah perlu punya ide bisnis?</h3>
+              <span class="icon">+</span>
+            </button>
+            <div class="faq_content">
+              <p>
+                Tidak wajib. Program membantu peserta menemukan dan
+                memvalidasi ide bisnis.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq_item">
+            <button class="faq_header">
+              <h3>Apakah ada mentoring?</h3>
+              <span class="icon">+</span>
+            </button>
+            <div class="faq_content">
+              <p>
+                Ya, mentoring intensif langsung dari pengusaha sukses dan
+                praktisi berpengalaman.
+              </p>
+            </div>
           </div>
         </div>
-        <div class="hero">
-          <img src="/assets/image/foto_abi_right.svg" alt="" />
-        </div>
-      </section>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__left footer__card">
+      <img src="/assets/image/icon-pondok-pe-1.png" alt="" class="footer__logo" />
+      <h3>Best Pondok Entrepreneur</h3>
 
-      <section class="about_us">
-        <div class="about_left">
-          <img src="./assets/image/hero_seaction_about.jpeg" alt="" />
-        </div>
+      <div class="footer__icon">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/yourNumber" target="_blank" class="icon">
+          <svg viewBox="0 0 32 32">
+            <path
+              d="M16.04 5.003a10.94 10.94 0 0 0-10.94 10.94c0 1.93.51 3.82 1.48 5.48L4 28l6.75-2.52a10.93 10.93 0 0 0 5.29 1.35h.01a10.94 10.94 0 0 0 0-21.88Zm6.36 15.71c-.27.76-1.56 1.48-2.2 1.58-.56.08-1.27.11-2.05-.13-.47-.15-1.08-.35-1.86-.69-3.28-1.43-5.41-4.77-5.57-4.99-.16-.22-1.33-1.77-1.33-3.39 0-1.62.84-2.42 1.14-2.75.3-.33.66-.41.88-.41.22 0 .44 0 .63.01.2.01.47-.08.74.57.27.66.92 2.28 1 2.44.08.16.13.35.03.56-.11.22-.16.35-.32.54-.16.19-.34.43-.48.58-.16.16-.32.33-.14.65.19.33.85 1.39 1.82 2.26 1.25 1.12 2.31 1.46 2.64 1.62.33.16.52.14.71-.08.19-.22.82-.95 1.04-1.27.22-.33.44-.27.74-.16.3.11 1.91.9 2.23 1.06.33.16.55.24.63.38.08.14.08.82-.19 1.58Z" />
+          </svg>
+        </a>
 
-        <div class="about_right">
-          <h1>Pondok Entrepreneur</h1>
-          <h4>
-            Pondok Asrama Non Formal untuk Menjadi Santri yang Siap Mengaji dan
-            Menggaji
-          </h4>
-          <p>
-            Selama 2 tahun, para lulusan SMA/SMK atau santri pondok pesantren
-            akan dibimbing bukan hanya dengan ilmu agama, tapi juga dibekali
-            skill bisnis dan teknologi digital mulai dari digital marketing,
-            desain, hingga kewirausahaan berbasis syariah.
-          </p>
-          <h4>
-            Bukan sekadar belajar, tapi juga disiapkan untuk berkarya dan
-            mandiri.
-          </h4>
+        <!-- Instagram -->
+        <a href="https://instagram.com/yourAccount" target="_blank" class="icon">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm4.25 5.5A4.5 4.5 0 1 0 16.5 12 4.51 4.51 0 0 0 12 7.5zm6.13-.88a1.13 1.13 0 1 0 1.13 1.13 1.13 1.13 0 0 0-1.13-1.13z" />
+          </svg>
+        </a>
 
-          <a href="#">Contact Us</a>
-        </div>
-      </section>
+        <!-- Facebook -->
+        <a href="https://facebook.com/yourPage" target="_blank" class="icon">
+          <svg viewBox="0 0 32 32">
+            <path d="M19 6h5V0h-5c-5.06 0-9 3.94-9 9v4H6v6h4v13h6V19h5l1-6h-6v-4c0-1.12.88-3 3-3z" />
+          </svg>
+        </a>
+      </div>
+    </div>
 
-      <section class="visi_misi">
-        <div class="blok kartu">
-          <div class="head">
-            <span class="material-symbols-outlined">visibility</span>
-            <h2>Visi</h2>
-          </div>
-          <p>
-            Membentuk generasi entrepreneur muda yang kreatif, mandiri, dan
-            berdaya saing tinggi di tingkat global.
-          </p>
-        </div>
+    <div class="footer__center footer__card">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact Us</a>
+    </div>
 
-        <div class="blok kartu">
-          <div class="head">
-            <span class="material-symbols-outlined">finance_mode</span>
-            <h2>Misi</h2>
-          </div>
-          <p>
-            Menyediakan pelatihan praktis, komunikasi dan mentoring yang
-            berfokus pada pengembangan keterampilan kewirausahaan.
-          </p>
-        </div>
-      </section>
+    <div class="footer__right footer__card">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18..." frameborder="0" allowfullscreen="">
+      </iframe>
+    </div>
+  </footer>
 
-      <section class="what_your_get">
-        
-        <div class="card__left">
-          <h2>Apa Yang Akan Kamu Dapatkan ?</h2>
-          <p>Belajar Agama, Bisnis, dan Teknologi dalam Satu Atap</p>
-          <p>Selama 2 tahun, para santri akan dibekali ilmu agama sekaligus skill praktis masa kini:
-            mulai dari fundamental bisnis syariah, dasar IT, pembuatan konten, strategi pemasaran digital, hingga latihan langsung sebagai customer service (offline & online).
-          </p>
-          <p>Bukan sekadar menjadi santri yang mengaji, tapi juga siap menghadapi dunia kerja & wirausaha.</p>
-        </div>
-        <div class="card__right">
-          <img src="/assets/image/seaction_your_get.jpg" alt="Apa yang kamu dapat">
-        </div>
-</section>
+</body>
+<script src="/script/main__kurikulum.js"></script>
+<script src="/script/ask.js"></script>
+<script src="/script/header.js"></script>
 
-
-      <section class="kurikulum"></section>
-
-      <section class="ask_for_me"></section>
-    </main>
-    <footer></footer>
-  </body>
 </html>

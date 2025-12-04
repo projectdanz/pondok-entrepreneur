@@ -3,10 +3,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 4rem 6rem;
+    padding: 8rem 6rem 4rem 6rem;
+    /* Added top padding for fixed header */
     gap: 2rem;
-    height: 100vh;        
+    min-height: 100vh;
     box-sizing: border-box;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    /* Optional: Add a light background to make it pop */
 }
 
 /* =============== TEKS SECTION =============== */
@@ -18,7 +21,8 @@
     font-size: 3.5rem;
     line-height: 1.1;
     margin: 0;
-    font-weight:bolder;
+    font-weight: bolder;
+    color: #2F5F98;
 }
 
 .main__teks h2 {
@@ -26,20 +30,22 @@
     line-height: 1.1;
     margin: 0;
     font-weight: 600;
-    color: #0d99ff;
+    color: #2D8BBA;
 }
 
 .main__teks p {
     margin-top: 1rem;
     font-size: .9rem;
-    color: #444;
+    color: #555;
     max-width: 80%;
+    line-height: 1.6;
 }
 
 .header__1 {
     display: flex;
     align-items: center;
     gap: .5rem;
+    margin-bottom: 1rem;
 }
 
 .header__1 img {
@@ -49,7 +55,7 @@
 /* Tombol */
 .main__teks a {
     display: inline-block;
-    background-color: #0d99ff;
+    background-color: #2D8BBA;
     color: white;
     padding: 0.8rem 1.7rem;
     border-radius: 10px;
@@ -60,7 +66,7 @@
 }
 
 .main__teks a:hover {
-    background-color: #0979c7;
+    background-color: #2F5F98;
 }
 
 /* =============== HERO IMAGE =============== */
@@ -77,7 +83,8 @@
     list-style: none;
     padding: 0;
     margin: 0.8rem 0 0 0;
-    height: 3.2rem; /* tinggi area teks */
+    height: 3.2rem;
+    /* tinggi area teks */
     position: relative;
     overflow: hidden;
 }
@@ -89,7 +96,7 @@
 
     font-size: 2.8rem;
     font-weight: 800;
-    color: #0d99ff;
+    color: #41B8D5;
 
     opacity: 0;
     transform: translateY(20px);
@@ -97,28 +104,65 @@
 }
 
 /* Urutan muncul per 3 detik */
-.main__teks ul li:nth-child(1) { animation-delay: 0s; }
-.main__teks ul li:nth-child(2) { animation-delay: 3s; }
-.main__teks ul li:nth-child(3) { animation-delay: 6s; }
+.main__teks ul li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.main__teks ul li:nth-child(2) {
+    animation-delay: 3s;
+}
+
+.main__teks ul li:nth-child(3) {
+    animation-delay: 6s;
+}
 
 /* ANIMASI: muncul → diam → hilang */
 @keyframes rotateWord {
-    0%   { opacity: 0; transform: translateY(20px); }
-    10%  { opacity: 1; transform: translateY(0); }
-    30%  { opacity: 1; transform: translateY(0); }
-    40%  { opacity: 0; transform: translateY(-20px); }
-    100% { opacity: 0; }
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    40% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 0;
+    }
 }
 
 /* =============== RESPONSIVE =============== */
 @media(max-width: 900px) {
     .main__hero {
-        flex-direction: column;
+        flex-direction: column-reverse;
+        /* Stack image on top or bottom? usually image top on mobile but let's stick to column for now */
         text-align: center;
+        padding: 7rem 2rem 4rem 2rem;
+        height: auto;
+        justify-content: center;
     }
 
     .main__teks {
         max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header__1 {
+        justify-content: center;
     }
 
     .main__teks p {
@@ -127,5 +171,49 @@
 
     .hero img {
         width: 300px;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .main__teks ul li {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+    }
+
+    @keyframes rotateWord {
+        0% {
+            opacity: 0;
+            transform: translate(-50%, 20px);
+        }
+
+        10% {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        30% {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+
+        40% {
+            opacity: 0;
+            transform: translate(-50%, -20px);
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .main__teks h1 {
+        font-size: 2.5rem;
+    }
+
+    .main__teks ul li {
+        font-size: 2rem;
     }
 }

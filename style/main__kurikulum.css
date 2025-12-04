@@ -1,0 +1,135 @@
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0px;
+  background-color: #2F5F98;
+}
+
+.carousel {
+  display: flex;
+  text-align: center;
+  gap: 40px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 40px 6rem;
+  scrollbar-width: none;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.card {
+  min-width: 350px;
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transition: transform .3s;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: center;
+}
+
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.carousel p {
+  margin-bottom: 15px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.carousel .card_head {
+  margin-bottom: 20px;
+  border-bottom: 2px solid #f0f0f0;
+  padding-bottom: 15px;
+}
+
+.carousel .card_head h2 {
+  color: #2F5F98;
+  font-size: 1.5rem;
+}
+
+.carousel ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.carousel ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+.carousel ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2D8BBA;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 40px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+}
+
+.nav:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .carousel {
+    padding: 40px 2rem;
+    gap: 20px;
+  }
+
+  .card {
+    min-width: 300px;
+  }
+
+  .nav {
+    width: 40px;
+    height: 40px;
+    font-size: 25px;
+  }
+
+  .prev {
+    left: 5px;
+  }
+
+  .next {
+    right: 5px;
+  }
+}

@@ -3,24 +3,31 @@
     display: flex;
     justify-content: center;
     align-items: stretch;
-    gap: 9rem;
-    padding: 3rem 2rem;
+    gap: 5rem;
+    padding: 5rem 2rem;
+    background-color: #f9f9f9;
 }
 
 /* CARD */
 .kartu {
-    background: #0b4f80;
+    background: #2F5F98;
     border-radius: 15px;
     width: 350px;
-    padding: 2rem;
-    border: 1.5px solid #555;
+    padding: 2.5rem;
+    border: none;
     transition: 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* EFFECT HOVER */
 .kartu:hover {
-    transform: translateY(-8px);
+    transform: translateY(-10px);
     background: #2D8BBA;
+    box-shadow: 0 15px 30px rgba(45, 139, 186, 0.3);
 }
 
 /* HEADER DALAM CARD */
@@ -28,21 +35,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    margin-bottom: 1rem;
+    gap: 15px;
+    margin-bottom: 1.5rem;
 }
 
 .head h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #fff;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
 }
 
 /* ICON */
 .material-symbols-outlined {
-    font-size: 2.5rem;
-    color: white;
+    font-size: 3rem;
+    color: #6CE5E8;
     font-variation-settings:
         "FILL" 0,
         "wght" 400,
@@ -52,9 +59,10 @@
 
 /* PARAGRAF */
 .kartu p {
-    color: #ccc;
+    color: #e0e0e0;
     line-height: 1.6;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    margin: 0;
 }
 
 /* RESPONSIVE */
@@ -62,10 +70,13 @@
     .visi_misi {
         flex-direction: column;
         align-items: center;
+        gap: 2rem;
+        padding: 4rem 2rem;
     }
 
     .kartu {
         width: 100%;
         max-width: 420px;
+        padding: 2rem;
     }
 }
